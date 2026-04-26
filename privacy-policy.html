@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <title>LittleLog — Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #fdf8f3;
+      --bg-soft: #f6e7d6;
+      --card: #ffffff;
+      --border: #ebd9c5;
+      --fg: #2b1d17;
+      --muted: #8a6b5c;
+      --accent: #e08b6b;
+      --accent-deep: #c76a4d;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1c1310;
+        --bg-soft: #261912;
+        --card: #2b1d17;
+        --border: #3a2a22;
+        --fg: #f5ece4;
+        --muted: #c7a89a;
+        --accent: #f0a684;
+        --accent-deep: #e08b6b;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Avenir, Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 36px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 18px;
+    }
+    .brand-name {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: -0.4px;
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      margin: 8px 0 4px;
+      letter-spacing: -0.6px;
+    }
+    .updated {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 0;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 36px;
+      margin-bottom: 10px;
+      letter-spacing: -0.3px;
+    }
+    h2 + p, h2 + ul, h2 + .tldr, h2 + table {
+      margin-top: 6px;
+    }
+    p, li {
+      font-size: 15.5px;
+      color: var(--fg);
+    }
+    a {
+      color: var(--accent-deep);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s ease;
+    }
+    a:hover { border-bottom-color: var(--accent-deep); }
+    .tldr {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin: 16px 0;
+    }
+    .tldr ul { margin: 6px 0 0; padding-left: 20px; }
+    .tldr li { margin-bottom: 6px; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 13.5px;
+      background: var(--bg-soft);
+      padding: 1px 6px;
+      border-radius: 4px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      font-size: 14.5px;
+    }
+    th, td {
+      text-align: left;
+      padding: 10px 14px;
+      vertical-align: top;
+    }
+    th {
+      background: var(--bg-soft);
+      font-weight: 700;
+      color: var(--fg);
+      font-size: 13px;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+    }
+    tr + tr td { border-top: 1px solid var(--border); }
+    td:first-child { white-space: nowrap; font-weight: 600; }
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    @media (max-width: 540px) {
+      .wrap { padding: 24px 16px 60px; }
+      h1 { font-size: 26px; }
+      table { font-size: 13.5px; }
+      th, td { padding: 8px 10px; }
+      td:first-child { white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <span class="brand-mark">♥</span>
+        <span class="brand-name">LittleLog</span>
+      </div>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: April 26, 2026</p>
+    </header>
+
+    <p>LittleLog (“the app”) is built to help parents track their baby's daily life. We take your privacy seriously. This policy explains what data the app handles, where it lives, and what permissions it uses.</p>
+
+    <h2>TL;DR</h2>
+    <div class="tldr">
+      <ul>
+        <li><strong>All your data stays on your device.</strong> LittleLog does not have a server. No accounts, no sign-in, no cloud sync.</li>
+        <li><strong>No analytics, no tracking, no advertising SDKs.</strong> We do not collect usage statistics or personal information.</li>
+        <li><strong>Photos and notes</strong> you add (diaper checks, milestones, etc.) are stored only in the app's private storage on your phone.</li>
+        <li><strong>Backups</strong> are exported manually by you, and only when you tap “Share backup”. Nothing leaves your device automatically.</li>
+      </ul>
+    </div>
+
+    <h2>What data we handle</h2>
+    <p>LittleLog stores the following on-device:</p>
+    <ul>
+      <li>Baby profile info you enter (name, date of birth, optional sex, optional birth weight/length, optional photo)</li>
+      <li>Daily logs you record (diapers, bottles, breast feeds, sleep, solids, temperature, custom categories, free-text notes)</li>
+      <li>Photos you attach to logs or milestone months</li>
+      <li>Medication schedules and dose history</li>
+      <li>App preferences (theme, custom categories, alarm sounds)</li>
+    </ul>
+    <p>All of this is saved in a local SQLite database and the app's private files directory. We never transmit it to a server we control.</p>
+
+    <h2>Permissions and why we need them</h2>
+    <table>
+      <thead>
+        <tr><th>Permission</th><th>Why we ask</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Camera<br><code>android.permission.CAMERA</code></td>
+          <td>To let you take photos for diaper events, milestone months, or baby profile pictures. The camera is used only when you tap an “Add photo” button.</td>
+        </tr>
+        <tr>
+          <td>Read media images / storage</td>
+          <td>To let you pick existing photos from your gallery for logs and milestones.</td>
+        </tr>
+        <tr>
+          <td>Post notifications</td>
+          <td>To show medication-dose reminders.</td>
+        </tr>
+        <tr>
+          <td>Schedule exact alarm / Use exact alarm</td>
+          <td>To fire medication alarms at the exact scheduled time.</td>
+        </tr>
+        <tr>
+          <td>Full-screen intent</td>
+          <td>To show the medication alarm screen on top so you don't miss a dose.</td>
+        </tr>
+        <tr>
+          <td>Foreground service / Foreground service media playback</td>
+          <td>To keep the alarm sound playing reliably when the screen is off.</td>
+        </tr>
+        <tr>
+          <td>Receive boot completed</td>
+          <td>To re-arm scheduled medication alarms after the device restarts.</td>
+        </tr>
+        <tr>
+          <td>Vibrate, Wake lock</td>
+          <td>So the alarm vibrates and wakes the screen when it fires.</td>
+        </tr>
+        <tr>
+          <td>Request ignore battery optimizations</td>
+          <td>Optional — you may grant this if alarms are being killed by aggressive battery saving.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Sharing &amp; backups</h2>
+    <p>LittleLog includes a “Backup” feature that exports your data as a single file (JSON + photos in a zip). The export is created locally and is only sent somewhere if <strong>you</strong> choose to share it via your phone's share sheet (e.g., to email, cloud drive, or another device). We never receive a copy.</p>
+    <p>Milestone collages can be shared as PNG images via the share sheet — same model: we hand the file to your share sheet and step out of the way.</p>
+
+    <h2>Children's privacy</h2>
+    <p>LittleLog is designed for parents and caregivers to track their own child's data. The app is not directed to children, and we do not knowingly collect any data from children.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If we change this policy we will update the “Last updated” date at the top.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy or your data? Email <a href="mailto:edward@listify.ai">edward@listify.ai</a>.</p>
+
+    <footer>
+      © 2026 LittleLog
+    </footer>
+  </div>
+</body>
+</html>
