@@ -166,35 +166,60 @@
   <div class="wrap">
     <header>
       <div class="brand">
-        <span class="brand-mark">♥</span>
+        <span class="brand-mark">&#9829;</span>
         <span class="brand-name">LittleLog</span>
       </div>
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: April 26, 2026</p>
+      <p class="updated">Last updated: May 13, 2026</p>
     </header>
 
-    <p>LittleLog (“the app”) is built to help parents track their baby's daily life. We take your privacy seriously. This policy explains what data the app handles, where it lives, and what permissions it uses.</p>
+    <p>LittleLog (&ldquo;the app&rdquo;) is built to help parents track their baby's daily life. We take your privacy seriously. This policy explains what data the app handles, where it lives, what third-party services are involved, and what permissions it uses.</p>
 
     <h2>TL;DR</h2>
     <div class="tldr">
       <ul>
-        <li><strong>All your data stays on your device.</strong> LittleLog does not have a server. No accounts, no sign-in, no cloud sync.</li>
-        <li><strong>No analytics, no tracking, no advertising SDKs.</strong> We do not collect usage statistics or personal information.</li>
-        <li><strong>Photos and notes</strong> you add (diaper checks, milestones, etc.) are stored only in the app's private storage on your phone.</li>
-        <li><strong>Backups</strong> are exported manually by you, and only when you tap “Share backup”. Nothing leaves your device automatically.</li>
+        <li><strong>Your baby's data stays on your device.</strong> LittleLog has no server, no account, no cloud sync. Logs, photos, notes, milestones, and medications never leave your phone unless <em>you</em> export a backup yourself.</li>
+        <li><strong>We do show a small banner ad</strong> via Google AdMob. AdMob is operated by Google and may collect device identifiers and your approximate (IP-based) location to serve ads. See the &ldquo;Advertising&rdquo; section below.</li>
+        <li><strong>We collect crash reports</strong> via Firebase Crashlytics so we can fix bugs. Crash reports contain technical info (stack trace, device model, OS version) but never your baby's logs, photos, or names.</li>
+        <li><strong>No usage analytics, no tracking SDKs, no profiling.</strong> We do not run any analytics SDK and we do not sell or share data.</li>
       </ul>
     </div>
 
-    <h2>What data we handle</h2>
-    <p>LittleLog stores the following on-device:</p>
+    <h2>What data we handle on-device</h2>
+    <p>The following is stored locally in the app's private storage and is never transmitted to any server we control:</p>
     <ul>
       <li>Baby profile info you enter (name, date of birth, optional sex, optional birth weight/length, optional photo)</li>
       <li>Daily logs you record (diapers, bottles, breast feeds, sleep, solids, temperature, custom categories, free-text notes)</li>
-      <li>Photos you attach to logs or milestone months</li>
+      <li>Photos you attach to logs, milestone months, or baby profiles</li>
       <li>Medication schedules and dose history</li>
-      <li>App preferences (theme, custom categories, alarm sounds)</li>
+      <li>App preferences (theme, custom categories, alarm sounds, active baby)</li>
     </ul>
-    <p>All of this is saved in a local SQLite database and the app's private files directory. We never transmit it to a server we control.</p>
+    <p>All of this lives in a local SQLite database and the app's private files directory. Other apps on your device cannot read it.</p>
+
+    <h2>Advertising (Google AdMob)</h2>
+    <p>LittleLog displays a single banner ad at the bottom of the screen, served by <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google AdMob</a>. To serve and measure ads, AdMob &mdash; not LittleLog &mdash; may collect:</p>
+    <ul>
+      <li>Your Android Advertising ID (a resettable, non-permanent identifier)</li>
+      <li>Approximate (IP-based) location, not GPS</li>
+      <li>Device info (model, OS version, language, screen size)</li>
+      <li>Ad interaction data (impressions, clicks, viewability)</li>
+    </ul>
+    <p>This data is handled by Google under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>. We never receive personal identifiers from AdMob &mdash; we only see anonymous, aggregated revenue reports.</p>
+    <p>You can reset or opt out of personalised ads at any time:</p>
+    <ul>
+      <li><strong>Android:</strong> Settings &rarr; Google &rarr; Ads &rarr; &ldquo;Delete advertising ID&rdquo; or &ldquo;Opt out of Ads Personalisation&rdquo;.</li>
+      <li><strong>iOS:</strong> Settings &rarr; Privacy &amp; Security &rarr; Apple Advertising &rarr; turn off Personalised Ads. (LittleLog requests App Tracking Transparency permission on iOS; if you deny it, only non-personalised ads are shown.)</li>
+    </ul>
+
+    <h2>Crash reports (Firebase Crashlytics)</h2>
+    <p>LittleLog uses <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Crashlytics</a> to report crashes so we can fix bugs. When the app crashes, the following technical data is sent to Google:</p>
+    <ul>
+      <li>Crash stack trace and last few debug log lines</li>
+      <li>Anonymous Crashlytics Installation UUID (a random identifier, not linked to you)</li>
+      <li>Device model, OS version, app version, build number</li>
+      <li>State of the app at the time of the crash (which screen was open, etc.)</li>
+    </ul>
+    <p>We do <strong>not</strong> include your baby's name, photos, logs, medication info, or any free-text notes in crash reports. Crashlytics data is retained by Google according to <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">their data-retention policy</a> (90 days for crash data).</p>
 
     <h2>Permissions and why we need them</h2>
     <table>
@@ -204,15 +229,19 @@
       <tbody>
         <tr>
           <td>Camera<br><code>android.permission.CAMERA</code></td>
-          <td>To let you take photos for diaper events, milestone months, or baby profile pictures. The camera is used only when you tap an “Add photo” button.</td>
+          <td>To let you take photos for events, milestone months, or baby profile pictures. The camera is used only when you tap an &ldquo;Add photo&rdquo; or &ldquo;Camera&rdquo; button.</td>
         </tr>
         <tr>
-          <td>Read media images / storage</td>
-          <td>To let you pick existing photos from your gallery for logs and milestones.</td>
+          <td>Photo picking (gallery)</td>
+          <td>Photo selection uses the system <strong>Android Photo Picker</strong> (Android 13+) or document picker (older). You select each photo manually, and the app receives access only to that file. We do <em>not</em> request <code>READ_MEDIA_IMAGES</code> or storage permissions.</td>
+        </tr>
+        <tr>
+          <td>Advertising ID<br><code>com.google.android.gms.permission.AD_ID</code></td>
+          <td>Required by the Google Mobile Ads SDK on Android 13+ to deliver the banner ad. You can reset or disable this identifier in your device settings (see the Advertising section above).</td>
         </tr>
         <tr>
           <td>Post notifications</td>
-          <td>To show medication-dose reminders.</td>
+          <td>To show medication-dose reminders and timer notifications.</td>
         </tr>
         <tr>
           <td>Schedule exact alarm / Use exact alarm</td>
@@ -236,26 +265,38 @@
         </tr>
         <tr>
           <td>Request ignore battery optimizations</td>
-          <td>Optional — you may grant this if alarms are being killed by aggressive battery saving.</td>
+          <td>Optional &mdash; you may grant this if alarms are being killed by aggressive battery saving.</td>
+        </tr>
+        <tr>
+          <td>Internet</td>
+          <td>Used solely for fetching banner ads from AdMob and sending crash reports to Firebase Crashlytics. No personal data is transmitted.</td>
         </tr>
       </tbody>
     </table>
 
     <h2>Sharing &amp; backups</h2>
-    <p>LittleLog includes a “Backup” feature that exports your data as a single file (JSON + photos in a zip). The export is created locally and is only sent somewhere if <strong>you</strong> choose to share it via your phone's share sheet (e.g., to email, cloud drive, or another device). We never receive a copy.</p>
-    <p>Milestone collages can be shared as PNG images via the share sheet — same model: we hand the file to your share sheet and step out of the way.</p>
+    <p>LittleLog includes a per-baby &ldquo;Backup&rdquo; feature that exports your data as a single file (JSON + photos). The export is created locally and is only sent somewhere if <strong>you</strong> choose to share it via your phone's share sheet (e.g., to email, a cloud drive, or another device). We never receive a copy.</p>
+    <p>Milestone collages can be shared as PNG images via the share sheet &mdash; same model: we hand the file to your share sheet and step out of the way.</p>
 
     <h2>Children's privacy</h2>
-    <p>LittleLog is designed for parents and caregivers to track their own child's data. The app is not directed to children, and we do not knowingly collect any data from children.</p>
+    <p>LittleLog is designed for parents and caregivers to track their own child's data. The app is not directed to children under 13, and we do not knowingly collect any data <em>from</em> children. The Google AdMob banner is configured to show non-personalised, family-friendly ads.</p>
+
+    <h2>Data deletion</h2>
+    <p>Because LittleLog has no account or server, deleting your data is immediate and local:</p>
+    <ul>
+      <li>Delete a single baby (and all its events, photos, meds, and milestones) from Profile &rarr; tap the baby &rarr; &ldquo;Delete baby&rdquo;.</li>
+      <li>Uninstall the app to remove everything in one step. Android will purge the app's private storage as part of uninstall.</li>
+    </ul>
+    <p>For Crashlytics or AdMob data held by Google, follow Google's deletion process via <a href="https://myaccount.google.com" target="_blank" rel="noopener">Google Account &rarr; Data &amp; privacy</a>.</p>
 
     <h2>Changes to this policy</h2>
-    <p>If we change this policy we will update the “Last updated” date at the top.</p>
+    <p>If we change this policy we will update the &ldquo;Last updated&rdquo; date at the top. Material changes (e.g., adding a new third-party SDK) will also be announced in the app's release notes.</p>
 
     <h2>Contact</h2>
     <p>Questions about this policy or your data? Email <a href="mailto:edward@listify.ai">edward@listify.ai</a>.</p>
 
     <footer>
-      © 2026 LittleLog
+      &copy; 2026 LittleLog
     </footer>
   </div>
 </body>
